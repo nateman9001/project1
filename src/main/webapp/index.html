@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Cooking with Gas!</title>
+</head>
+<body>
+
+
+<form>
+<label for="name">Last Name</label> <input type="text" id="name"> <br>
+<label for="password">First Name</label> <input type="text" id="password"> <br>
+<label for="email">Email</label> <input type="text" id="email"> <br>
+<label for="department">Department</label> <input type="text" id="department"> <br>
+<label for="empolyeeType">Employee Type</label> <input type="text" id="employeeType"> <br>
+<button type="button" id="createTodoBtn" button onclick ="createTodo()">Create!</button>
+</form>
+
+
+
+<br><br><br><br><br><br><br><br>
+<form >
+<button type="button" id="redirectBtn" button onclick = "myFunction()">Redirect!</button>
+</form>
+
+<br><br><br>
+
+<form >
+<button type="button" id="createEmployeedoBtn" button onclick = "getAllEmployees()">Employee Create!</button>
+</form>
+
+	<table>
+		<thead>
+			<tr>
+				<th>User ID</th>
+				<th>Name</th>
+				<th>Password (only shown for demo reasons)</th>
+				<th>Email</th>
+				<th>Department</th>
+				<th>Employee Type</th>
+			</tr>
+		</thead>
+		<tbody id="employeeTable"></tbody>
+	</table>
+	
+<form >	
+<button type="button" id="createReemdoBtn" button onclick = "getAllReems()">Reimbursments Create!</button>
+</form>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Reem ID</th>
+				<th>Amount</th>
+				<th>Description</th>
+				<th>Status</th>
+				<th>Manager</th>
+			</tr>
+		</thead>
+		<tbody id="reemTable"></tbody>
+	</table>
+
+	
+<script src="./index.js"></script>
+</body>
+</html>
