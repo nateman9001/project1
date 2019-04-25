@@ -1,10 +1,43 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>Cooking with Gas!</title>
 </head>
 <body>
 
+<h1>Manager Page</h1>
+
+<br><br><br><br><br><br><br><br>
+
+<a href="employee.html">to employee page</a>
+<br>
+<a href="index.html">to index page</a>
+<br>
+<a href="reimburseMang.html">to reimburse manager page</a>
+
+<form >
+<button type="button" id="redirectBtn" button onclick = "myFunction()">Redirect!</button>
+</form>
+
+<br><br><br>
+
+<form >	
+<button type="button" id="createReemdoBtn" button onclick = "getAllReems()">Reimbursments Create!</button>
+</form>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Reem ID</th>
+				<th>Amount</th>
+				<th>Description</th>
+				<th>Status</th>
+				<th>Manager</th>
+			</tr>
+		</thead>
+		<tbody id="reemTable"></tbody>
+	</table>
+
+	
+<script src="./manager.js"></script>
 </body>
 </html>

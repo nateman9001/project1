@@ -1,10 +1,44 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>Cooking with Gas!</title>
 </head>
 <body>
 
+<h1>Employee Page</h1>
+
+<br><br><br><br><br><br><br><br>
+<a href="index.html">to index page</a>
+<br>
+<a href="manager.html">to manager page</a>
+<br>
+<a href="reimburseEmp.html">to reimburse employee page</a>
+
+
+<form >
+<button type="button" id="redirectBtn" button onclick = "myFunction()">Redirect!</button>
+</form>
+
+<br><br><br>
+
+<form >
+<button type="button" id="createEmployeedoBtn" button onclick = "getAllEmployees()">Employee Create!</button>
+</form>
+
+	<table>
+		<thead>
+			<tr>
+				<th>User ID</th>
+				<th>Name</th>
+				<th>Password (only shown for demo reasons)</th>
+				<th>Email</th>
+				<th>Department</th>
+				<th>Employee Type</th>
+			</tr>
+		</thead>
+		<tbody id="employeeTable"></tbody>
+	</table>
+	
+		
+<script src="./employee.js"></script>
 </body>
 </html>

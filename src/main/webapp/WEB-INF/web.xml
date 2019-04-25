@@ -6,15 +6,19 @@
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
-  	<servlet-name>FrontController2</servlet-name>
-  	<servlet-class>com.revature.web.DispatcherServlet</servlet-class>
-  	<load-on-startup>10</load-on-startup>
+  	<servlet-name>dispatch</servlet-name>
+  	<servlet-class>com.revature.web.DispatcherServlet</servlet-class>	
+  </servlet>
+  
+    <servlet>
+  	<servlet-name>reemDispatch</servlet-name>
+  	<servlet-class>com.revature.web.ReemDispatcherServlet</servlet-class>	
   </servlet>
   
   <servlet>
   	<servlet-name>LoginServlet</servlet-name>
   	<servlet-class>com.revature.web.LoginServlet</servlet-class>
-  	<load-on-startup>1</load-on-startup>
+  	
   </servlet>
   
       <servlet>
@@ -25,8 +29,9 @@
   <servlet>
     <servlet-name>FrontControllerServlet</servlet-name>
     <servlet-class>com.revature.servlets.FrontControllerServlet</servlet-class>
-    
   </servlet>
+  
+  
   
   <servlet-mapping>
     <servlet-name>FrontControllerServlet</servlet-name>
@@ -34,8 +39,13 @@
   </servlet-mapping>
   
   <servlet-mapping>
-  	<servlet-name>FrontController2</servlet-name>
-  	<url-pattern>/api/*</url-pattern>
+  	<servlet-name>dispatch</servlet-name>
+  	<url-pattern>/api/todos</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+  	<servlet-name>reemDispatch</servlet-name>
+  	<url-pattern>/api/reemdos</url-pattern>
   </servlet-mapping>
   
   <servlet-mapping>

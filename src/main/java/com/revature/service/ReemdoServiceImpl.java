@@ -19,7 +19,7 @@ public class ReemdoServiceImpl implements ReemdoService{
 	//this class 
 	@Override
 	public List<Reemdo> getAllTodos(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("Inside TodoServiceImpl");
+		System.out.println("Inside ReemdoServiceImpl");
 		return dao.getAllReemdos();
 	}
 
