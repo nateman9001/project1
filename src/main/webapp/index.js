@@ -48,7 +48,7 @@ const parseForm = () => {
 		password: passwordText,
 		email: emailText,
 		department: departmentText,
-		employeeType: employeTypeText
+		employeeType: employeeTypeText
 	}
 }
 

@@ -20,12 +20,14 @@
 		<div class="row" style="height: 100px">
 			<div class="col-2"></div>
 			<div class="col-8">
-				<h2 style="text-align: center">Welcome to the Polkamans</h2>
+				<h2 style="text-align: center">Welcome</h2>
 				<hr>
 			</div>
 			<div class="col-2"></div>
 		</div>
 	</div>
+	
+	
 	<div class="container-fluid">
 		<div class="row" style="height: 200px">
 			<div class="col-2"></div>
@@ -34,16 +36,18 @@
 				<!-- A form can be given an "action" and an HTTP "method". The action
 				determines which servlet the request is sent to while the method determines
 				what type of HTTP request the client is making. -->
-				<form method="get" action="./LoginServlet.do">
+				<form method="GET" action="http://localhost:8088/ServletExample/LoginServlet.do">
 					<input class="form-control" type="text" name="username" id="user" placeholder="Enter your username"> <input
 						class="form-control" type="password" name="password1" placeholder="Enter your password"> <input
 						class="form-control" type="password" name="password2" placeholder="Enter your password again, swine">
-						<button class="btn-danger">Create Account</button>
+						<button class="button">Create Account</button>
 				</form>
 			</div>
 			<div class="col-2"></div>
 		</div>
 	</div>
+	
+	
 	<div class="container-fluid">
 		<div class="row" style="height: 200px">
 			<div class="col-2"></div>
@@ -52,12 +56,13 @@
 				<form>
 					<input class="form-control" type="text" name="username" placeholder="Enter your username"> <input
 						class="form-control" type="password" name="password1" placeholder="Enter your password">
-						<button class="btn-danger">Create Account</button>
+						<button class="button">Create Account</button>
 				</form>
 			</div>
 			<div class="col-2"></div>
 		</div>
 	</div>
+
 
 </body>
 </html>

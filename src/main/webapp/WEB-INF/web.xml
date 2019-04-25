@@ -26,17 +26,11 @@
   	<servlet-class>com.revature.web.LoginServlet2</servlet-class>
   </servlet>
   
-  <servlet>
-    <servlet-name>FrontControllerServlet</servlet-name>
-    <servlet-class>com.revature.servlets.FrontControllerServlet</servlet-class>
-  </servlet>
+
   
   
   
-  <servlet-mapping>
-    <servlet-name>FrontControllerServlet</servlet-name>
-    <url-pattern>*.do</url-pattern>
-  </servlet-mapping>
+
   
   <servlet-mapping>
   	<servlet-name>dispatch</servlet-name>
@@ -50,7 +44,7 @@
   
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/login</url-pattern>
+  	<url-pattern>/LoginServlet.do</url-pattern>
   </servlet-mapping>
   
   

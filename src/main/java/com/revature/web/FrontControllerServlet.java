@@ -10,6 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class FrontControllerServlet
+ * 
+ *   <servlet>
+ *   <servlet-name>FrontControllerServlet</servlet-name>
+ *   <servlet-class>com.revature.servlets.FrontControllerServlet</servlet-class>
+ * </servlet>
+ * 
+ *   <servlet-mapping>
+ *   <servlet-name>FrontControllerServlet</servlet-name>
+ *   <url-pattern>*.do</url-pattern>
+ * </servlet-mapping>
  */
 public class FrontControllerServlet extends HttpServlet {
 	

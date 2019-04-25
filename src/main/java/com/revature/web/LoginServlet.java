@@ -54,7 +54,11 @@ public class LoginServlet extends HttpServlet {
 					+ "<tr><td>Very</td><td>Annoying</td></tr></tbody></table>");
 		}
 		else {
-			response.sendRedirect("./Users/DispatcherServlet.html");
+			System.out.println("Login redirect attempt!");
+
+			response.sendRedirect("./employee.html");
+			//response.sendRedirect("./Users/DispatcherServlet.html");
+
 		}
 		
 		}
@@ -66,6 +70,8 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("LoginServlet doPost attempt!");
+
 		doGet(request, response);
 	}
 
