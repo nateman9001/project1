@@ -7,6 +7,9 @@ import com.revature.model.UserDetails;
 
 public interface LoginService {
 
+	////////////////does nothing right now!!!!!!!!!!!!////////////////////
+	
+	
 	UserDetails attemptAuthentication(HttpServletRequest request, HttpServletResponse response);
 
 }

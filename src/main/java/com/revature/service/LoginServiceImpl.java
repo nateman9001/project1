@@ -9,6 +9,10 @@ import com.revature.model.UserDetails;
 
 public class LoginServiceImpl implements LoginService {
 	
+	
+	////////////////////does nothing right now!!!!!!!!////////////////
+	
+	
 	private final LoginDao dao = new LoginDaoImpl();
 	
 	@Override

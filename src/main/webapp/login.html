@@ -32,7 +32,7 @@
 		<div class="row" style="height: 200px">
 			<div class="col-2"></div>
 			<div class="col-8">
-				<h2 style="text-align: center">Sign up for an account today.</h2>
+				<h2 style="text-align: center">Log in please</h2>
 				<!-- A form can be given an "action" and an HTTP "method". The action
 				determines which servlet the request is sent to while the method determines
 				what type of HTTP request the client is making. -->
@@ -40,6 +40,12 @@
 					<input class="form-control" type="text" name="username" id="user" placeholder="Enter your username"> <input
 						class="form-control" type="password" name="password1" placeholder="Enter your password"> <input
 						class="form-control" type="password" name="password2" placeholder="Enter your password again, swine">
+						  
+						  <select name="userType" id="userType">
+    						<option value="employee">Employee</option>
+    						<option value="manager">Manager</option>
+    					  </select>
+    					  
 						<button class="button">Create Account</button>
 				</form>
 			</div>
@@ -48,20 +54,7 @@
 	</div>
 	
 	
-	<div class="container-fluid">
-		<div class="row" style="height: 200px">
-			<div class="col-2"></div>
-			<div class="col-8">
-				<h2 style="text-align: center">Please login.</h2>
-				<form>
-					<input class="form-control" type="text" name="username" placeholder="Enter your username"> <input
-						class="form-control" type="password" name="password1" placeholder="Enter your password">
-						<button class="button">Create Account</button>
-				</form>
-			</div>
-			<div class="col-2"></div>
-		</div>
-	</div>
+
 
 
 </body>

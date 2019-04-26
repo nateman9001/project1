@@ -38,18 +38,12 @@ const createTodo = () => {
 }
 
 const parseForm = () => {
-	//comment this out for alt
-	//const userIdNumber = document.getElementById("userId").value;
-	//
 	const nameText = document.getElementById("name").value;
 	const passwordText = document.getElementById("password").value;
 	const emailText = document.getElementById("email").value;
 	const departmentText = document.getElementById("department").value;
 	const employeeTypeText = document.getElementById("employeeType").value;
 	return {
-		//comment this out for alt
-		//userId: userIdNumber,
-		//
 		name: nameText,
 		password: passwordText,
 		email: emailText,

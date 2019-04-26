@@ -2,6 +2,9 @@ package com.revature.model;
 
 public class UserDetails {
 
+	////////////////this does nothing right now!!!!!!////////////////////
+	
+	
 	private String username;
 	private String role;
 

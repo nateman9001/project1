@@ -1,5 +1,6 @@
 package com.revature.dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,13 +61,31 @@ public class TodoDaoImpl implements TodoDao {
 		
 		// Get a connection to our Data Source
 		try (Connection conn = ConnectionFactory.getConnection()) {
+			//
+			//ok, its getting this far
+			//
+			System.out.println("Inside TodoDaoImpl createTodo, value is " + todo);
 			// Initialize our Insert statement
-			PreparedStatement stmt = conn.prepareStatement("INSERT INTO todos (lastName, firstName, email, department, employeeType) VALUES (?, ?, ?, ?, ?)");
+			CallableStatement stmt = conn.prepareCall("CALL create_employee(?, ?, ?, ?, ?)");
+			
+			//comment this out for alt
+			//PreparedStatement stmt = conn.prepareStatement("INSERT INTO employee (userId, name, password, email, department, employeeType) VALUES (?, ?, ?, ?, ?, ?)");
+			//
+			
 			//PreparedStatement stmt = conn.prepareStatement("INSERT INTO todos (userId, lastName, firstName, email, department, employeeType) VALUES (?, ?, ?, ?, ?, ?)");
 
 			
 			// Set the values of our Insert Statement to help prevent SQL Injection
-			//stmt.setInt(1, todo.getUserId());
+			
+			//comment this out for alt
+			/*stmt.setInt(1, todo.getUserId());
+			stmt.setString(2, todo.getName());
+			stmt.setString(3, todo.getPassword());
+			stmt.setString(4, todo.getEmail());
+			stmt.setString(5, todo.getDepartment());
+			stmt.setString(6, todo.getEmployeeType());*/
+			//
+			
 			stmt.setString(1, todo.getName());
 			stmt.setString(2, todo.getPassword());
 			stmt.setString(3, todo.getEmail());
@@ -76,7 +95,15 @@ public class TodoDaoImpl implements TodoDao {
 			// Execute the query, determining the number of rows that were affected
 			int rowsAffected = stmt.executeUpdate();
 			if (rowsAffected == 1)
-				return todo;
+				System.out.println("Inside TodoDaoImpl creatTodo, right before return, value is " + todo);
+//				return todo;
+				
+			PreparedStatement prep = conn.prepareStatement("select * from employee where name = ?");
+			prep.setString(1, todo.getName());
+			ResultSet rs = prep.executeQuery();
+			if (rs.next())
+				return new Employeedo(rs.getInt("userId"), rs.getString("name"), rs.getString("email"), rs.getString("department"), rs.getString("employeeType"));
+						
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

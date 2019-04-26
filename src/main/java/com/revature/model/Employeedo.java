@@ -18,6 +18,19 @@ public class Employeedo {
 	
 
 
+	public Employeedo(int userId, String name, String email, String department, String employeeType) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.email = email;
+		this.department = department;
+		this.employeeType = employeeType;
+	}
+
+
+
+
+
 	public Employeedo(int userId, String name, String password, String email, String department, String employeeType) {
 		super();
 		this.userId = userId;

@@ -10,6 +10,9 @@ import com.revature.util.ConnectionFactory;
 
 public class LoginDaoImpl implements LoginDao {
 
+	/////////////////does nothing right now!!!!//////////////////
+	
+	
 	@Override
 	public UserDetails attemptAuthentication(String username, String password) {
 		

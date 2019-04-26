@@ -17,6 +17,8 @@ public class LoginServlet2 extends HttpServlet {
 	
 	private final LoginService service = new LoginServiceImpl();
 
+	/////////this does nothign right now!!!!!////////////////////
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		final UserDetails user = service.attemptAuthentication(req, resp);

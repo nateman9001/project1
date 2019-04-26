@@ -29,6 +29,8 @@ public class TodoServiceImpl implements TodoService {
 		try {
 			// From the HTTP Request body, parse the JSON into a Todo Object
 			Employeedo todo = mapper.readValue(request.getInputStream(), Employeedo.class);
+			System.out.println("Inside createTodo ServiceImpl");
+			System.out.println(todo);
 			return dao.createTodo(todo);
 		} catch (IOException e) {
 			e.printStackTrace();

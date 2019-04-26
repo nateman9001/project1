@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet {
 	
 	
 	private static final long serialVersionUID = 1L;
+	
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,6 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password1 = request.getParameter("password1");
 		String password2 = request.getParameter("password2");
+		String userType  = request.getParameter("userType");
 		
 		//We need to do some error checking; we need to check that our strings aren't null
 		//or empty strings
@@ -39,24 +41,23 @@ public class LoginServlet extends HttpServlet {
 		if(username == null || username.equals("") || password1 == null || password1.equals("")
 				|| password2 == null || password2.equals("")) {
 			
-			//Once again, setting the content type we want to send back to the client
-			response.setContentType("text/plain");
-			//Once again, creating a print writer object to write back to the client
-			PrintWriter writing = response.getWriter();
-			//Call the PrintWriter's write method
-			writing.write("Yeah, right. You tried it. But nah.");
+			response.sendRedirect("./login.html");
 		}
 		
 		else if(!password1.equals(password2)){
-			response.setContentType("text/html");
-			PrintWriter writeMe = response.getWriter();
-			writeMe.write("<table><thead><tr><td>You</td><td>Are</td></tr></thead><tbody>"
-					+ "<tr><td>Very</td><td>Annoying</td></tr></tbody></table>");
+			response.sendRedirect("./login.html");
 		}
 		else {
 			System.out.println("Login redirect attempt!");
-
-			response.sendRedirect("./employee.html");
+				if(userType.equals("employee")) 
+				{
+					response.sendRedirect("./employee.html");
+				}
+				else
+				{
+					response.sendRedirect("./manager.html");
+				}
+			//response.sendRedirect("./employee.html");
 			//response.sendRedirect("./Users/DispatcherServlet.html");
 
 		}
