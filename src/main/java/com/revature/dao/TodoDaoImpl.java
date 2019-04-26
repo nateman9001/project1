@@ -68,23 +68,7 @@ public class TodoDaoImpl implements TodoDao {
 			// Initialize our Insert statement
 			CallableStatement stmt = conn.prepareCall("CALL create_employee(?, ?, ?, ?, ?)");
 			
-			//comment this out for alt
-			//PreparedStatement stmt = conn.prepareStatement("INSERT INTO employee (userId, name, password, email, department, employeeType) VALUES (?, ?, ?, ?, ?, ?)");
-			//
-			
-			//PreparedStatement stmt = conn.prepareStatement("INSERT INTO todos (userId, lastName, firstName, email, department, employeeType) VALUES (?, ?, ?, ?, ?, ?)");
-
-			
 			// Set the values of our Insert Statement to help prevent SQL Injection
-			
-			//comment this out for alt
-			/*stmt.setInt(1, todo.getUserId());
-			stmt.setString(2, todo.getName());
-			stmt.setString(3, todo.getPassword());
-			stmt.setString(4, todo.getEmail());
-			stmt.setString(5, todo.getDepartment());
-			stmt.setString(6, todo.getEmployeeType());*/
-			//
 			
 			stmt.setString(1, todo.getName());
 			stmt.setString(2, todo.getPassword());
@@ -96,7 +80,7 @@ public class TodoDaoImpl implements TodoDao {
 			int rowsAffected = stmt.executeUpdate();
 			if (rowsAffected == 1)
 				System.out.println("Inside TodoDaoImpl creatTodo, right before return, value is " + todo);
-//				return todo;
+
 				
 			PreparedStatement prep = conn.prepareStatement("select * from employee where name = ?");
 			prep.setString(1, todo.getName());

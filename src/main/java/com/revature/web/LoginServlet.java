@@ -41,11 +41,11 @@ public class LoginServlet extends HttpServlet {
 		if(username == null || username.equals("") || password1 == null || password1.equals("")
 				|| password2 == null || password2.equals("")) {
 			
-			response.sendRedirect("./login.html");
+			response.sendRedirect("./index.html");
 		}
 		
 		else if(!password1.equals(password2)){
-			response.sendRedirect("./login.html");
+			response.sendRedirect("./index.html");
 		}
 		else {
 			System.out.println("Login redirect attempt!");

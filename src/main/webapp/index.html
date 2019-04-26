@@ -1,35 +1,61 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Cooking with Gas!</title>
+<meta charset="ISO-8859-1">
+<title>Cooking with Gas!</title>
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<h1>Example Page</h1>
+<h1>Login Page</h1>
 
-<br><br><br>
-	<a href="employee.html">to employee page</a>
-	<br>
-	<a href="manager.html">to manager page</a>
-	<br>
-	<a href="login.html">to login page. Delete later.</a>
-
-
-
-
-<br><br><br>
-
-<form>
- <!--<label for="userId">User Id (start at 1)</label> <input type="number" id="userId" value ="1"> <br> -->
-<label for="name">Last Name</label> <input type="text" id="name" value ="nate"> <br>
-<label for="password">Password</label> <input type="text" id="password"> <br>
-<label for="email">Email</label> <input type="text" id="email"> <br>
-<label for="department">Department</label> <input type="text" id="department"> <br>
-<label for="empolyeeType">Employee Type</label> <input type="text" id="employeeType"> <br>
-<button type="button" id="createTodoBtn" button onclick ="createTodo()">Create!</button>
-</form>
-
-
+	<div class="container-fluid" style="margin-top: 50px">
+		<div class="row" style="height: 100px">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<h2 style="text-align: center">Welcome</h2>
+				<hr>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	</div>
 	
-<script src="./index.js" type="text/javascript"></script>
+	
+	<div class="container-fluid">
+		<div class="row" style="height: 200px">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<h2 style="text-align: center">Log in please</h2>
+				<!-- A form can be given an "action" and an HTTP "method". The action
+				determines which servlet the request is sent to while the method determines
+				what type of HTTP request the client is making. -->
+				<form method="GET" action="http://localhost:8088/ServletExample/LoginServlet.do">
+					<input class="form-control" type="text" name="username" id="user" placeholder="Enter your username"> <input
+						class="form-control" type="password" name="password1" placeholder="Enter your password"> <input
+						class="form-control" type="password" name="password2" placeholder="Enter your password again, swine">
+						  
+						  <select name="userType" id="userType">
+    						<option value="employee">Employee</option>
+    						<option value="manager">Manager</option>
+    					  </select>
+    					  
+						<button class="button">Log In</button>
+				</form>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	</div>
+	
+	
+
+
+
 </body>
 </html>
