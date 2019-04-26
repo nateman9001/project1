@@ -40,13 +40,14 @@ public class TodoDaoImpl implements TodoDao {
 	}
 
 	
-	
+	/////////////////////////////////////////////////
 	@Override
 	public Employeedo getTodoById(int id) {
 	
 		return null;
 	}
 
+	///////////////////////////////////////////////////
 	@Override
 	public Employeedo createTodo(Employeedo todo) {
 		
@@ -94,21 +95,19 @@ public class TodoDaoImpl implements TodoDao {
 		return new Employeedo();
 	}
 
+	/////////////////////////////////////////////////////////////////////////
 	@Override
 	public Employeedo updateTodo(Employeedo toBeUpdated) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	////////////////////////////////////////////////////////////////////////
 	@Override
 	public long deleteTodo(Employeedo... toBeDeleted) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	
-	/*
-	 * 
-	 * 
-	 */
 
 }
